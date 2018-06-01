@@ -64,7 +64,7 @@ public class DbManagerTestSuite {
     @Test
     public void testSelectUsersAndPost() throws SQLException {
         //Given
-        String sqlQuery = "SELECT U.FIRSTNAME, U.LASTNAME, COUNT(*) AS POSTS_NUMBER\n" +
+        String sqlQuery = "SELECT U.FIRSTNAME, U.LASTNAME, COUNT(1) AS POSTS_NUMBER\n" +
                 "FROM USERS U, POSTS P\n" +
                 "WHERE U.ID = P.USER_ID\n" +
                 "GROUP BY USER_ID\n" +
